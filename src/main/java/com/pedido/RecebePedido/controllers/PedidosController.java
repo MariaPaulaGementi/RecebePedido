@@ -36,9 +36,9 @@ public class PedidosController {
     }
 
     //busca pelo numero do pedido
-    @GetMapping(value = "/{numeroPedido}")
-    public Long getPedido(@RequestBody Pedido pedido){
-        Pedido pedidoBuscado =  repository.getReferenceById(pedido.getId());
-        return pedidoBuscado.getNumeroControle();
+    @GetMapping(value = "/cliente/{codCliente}")
+    public List<Pedido> getPedido(@PathVariable String codCliente){
+        List<Pedido> pedidos =  findAll();
+        return pedidos.stream().filter(pedido -> pedido.getCodCliente().equals(codCliente)).toList();
     }
 }

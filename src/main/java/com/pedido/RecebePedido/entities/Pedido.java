@@ -18,10 +18,6 @@ public class Pedido {
     private Long quantidadeProd;
     private String codCliente;
 
-    @ManyToOne
-    @JoinColumn(name = "cliente_codCliente")
-    private Cliente cliente;
-
     public Pedido(){
 
     }
