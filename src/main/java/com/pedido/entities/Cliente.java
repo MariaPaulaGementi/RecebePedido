@@ -4,13 +4,13 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name="tb_cliente")
-public class cliente {
+public class Cliente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String codCliente;
 
-    public cliente(){
+    public Cliente(){
 
     }
 

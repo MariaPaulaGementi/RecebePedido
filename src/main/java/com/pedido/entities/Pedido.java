@@ -1,13 +1,12 @@
 package com.pedido.entities;
 
-import ch.qos.logback.core.net.server.Client;
 import jakarta.persistence.*;
 
 import java.util.Date;
 
 @Entity
 @Table(name="tb_pedido")
-public class pedido {
+public class Pedido {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,9 +20,9 @@ public class pedido {
 
     @ManyToOne
     @JoinColumn(name = "cliente_codCliente")
-    private cliente cliente;
+    private Cliente cliente;
 
-    public pedido (){
+    public Pedido(){
 
     }
 
