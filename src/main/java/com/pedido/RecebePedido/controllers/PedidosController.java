@@ -5,6 +5,7 @@ import com.pedido.RecebePedido.repositories.PedidosRepositories;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -31,6 +32,12 @@ public class PedidosController {
     //insere pedido
     @PostMapping
     public Pedido insert(@RequestBody Pedido pedido){
+        if ( pedido.getDataCadastro() == null)
+            pedido.setDataCadastro(new Date());
+
+        if ( pedido.getQuantidadeProd() == null)
+            pedido.setQuantidadeProd((long) 1);
+
         Pedido savePedido =  repository.save(pedido);
         return savePedido;
     }
