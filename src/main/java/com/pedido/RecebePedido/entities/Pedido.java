@@ -1,4 +1,4 @@
-package com.pedido.entities;
+package com.pedido.RecebePedido.entities;
 
 import jakarta.persistence.*;
 

@@ -1,8 +1,7 @@
-package com.pedido.controllers;
+package com.pedido.RecebePedido.controllers;
 
-import com.pedido.entities.Cliente;
-import com.pedido.entities.Pedido;
-import com.pedido.repositories.ClientesRepositories;
+import com.pedido.RecebePedido.entities.Cliente;
+import com.pedido.RecebePedido.repositories.ClientesRepositories;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
