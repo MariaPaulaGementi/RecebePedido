@@ -18,10 +18,19 @@ public class Pedido {
     private Long quantidadeProd;
     private String codCliente;
 
+    private String valortotal;
+
     public Pedido(){
 
     }
 
+    public String getValortotal() {
+        return valortotal;
+    }
+
+    public void setValortotal(String valortotal) {
+        this.valortotal = valortotal;
+    }
     public Long getNumeroControle() {
         return numeroControle;
     }
