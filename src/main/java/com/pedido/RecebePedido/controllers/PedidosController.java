@@ -23,7 +23,7 @@ public class PedidosController {
     }
 
     //busca pelo ID
-    @GetMapping(value = "/{id}")
+    @GetMapping(value = "/id/{id}")
     public Pedido findById(@PathVariable Long id){
         Pedido pedidoId =  repository.findById(id).get();
         return pedidoId;

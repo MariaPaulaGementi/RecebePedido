@@ -11,5 +11,5 @@ create table tb_pedido (
     valor_uni_produto numeric,
     quantidade_prod numeric,
     cod_cliente text,
-    valor_total numeric
+    valortotal numeric
 );
