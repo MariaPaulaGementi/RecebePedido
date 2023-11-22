@@ -31,9 +31,9 @@ Consultando o Banco H2:
 
 -Baixe os compronentes para rodar esse projeto (Java 17, Spring Boot-V3.1.4) ;
 
--Para acessar o Banco clique no link http://localhost:8080/h2-console/login.jsp?jsessionid=4a38d3185b638558fd6571a999ebb298 ;
+-Para acessar o Banco clique no link http://localhost:8080/h2-console
 
--Starte o Spring Boot ;
+-Inicie o Spring Boot ;
 
 Pronto, só utilizar o projeto !
 
