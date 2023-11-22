@@ -10,6 +10,6 @@ create table tb_pedido (
     nome_produto text,
     valor_uni_produto numeric,
     quantidade_prod numeric,
-    cod_cliente text
-    valor_total text
+    cod_cliente text,
+    valor_total numeric
 );

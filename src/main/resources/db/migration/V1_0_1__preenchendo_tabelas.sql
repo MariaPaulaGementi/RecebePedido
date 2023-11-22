@@ -10,7 +10,8 @@ insert Into tb_pedido values (
     'produto 1',
     10.00,
     2,
-    '0001'
+    '0001',
+    15.00
 );
 insert Into tb_pedido values (
     2,
@@ -19,7 +20,8 @@ insert Into tb_pedido values (
     'produto 2',
     5.00,
     5,
-    '0002'
+    '0002',
+    25.88
 );
 insert Into tb_pedido values (
     3,
@@ -28,7 +30,8 @@ insert Into tb_pedido values (
     'produto 3',
     3.78,
     9,
-    '0002'
+    '0002',
+    26.88
 );
 insert Into tb_pedido values (
     4,
@@ -37,5 +40,6 @@ insert Into tb_pedido values (
     'produto 4',
     6.99,
     3,
-    '0003'
+    '0003',
+    32.88
 );

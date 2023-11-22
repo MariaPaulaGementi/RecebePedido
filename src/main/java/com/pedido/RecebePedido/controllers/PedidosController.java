@@ -31,13 +31,28 @@ public class PedidosController {
 
     //insere pedido
     @PostMapping
-    public Pedido insert(@RequestBody Pedido pedido){
-        if ( pedido.getDataCadastro() == null)
+    public Pedido insert(@RequestBody Pedido pedido) {
+        Long valorTotal = (long) 0;
+        if (pedido.getDataCadastro() == null)
             pedido.setDataCadastro(new Date());
 
-        if ( pedido.getQuantidadeProd() == null)
+        if (pedido.getQuantidadeProd() == null)
             pedido.setQuantidadeProd((long) 1);
 
+
+        if (pedido.getQuantidadeProd() > 5 && pedido.getQuantidadeProd() < 10){
+            valorTotal = (pedido.getValorUniProduto() * pedido.getQuantidadeProd());
+            valorTotal = valorTotal + ((long) 0.05 * valorTotal);
+       }
+       else if ( pedido.getQuantidadeProd() > 10 ) {
+            valorTotal = (pedido.getValorUniProduto() * pedido.getQuantidadeProd());
+            valorTotal = valorTotal + ((long) 0.10 * valorTotal);
+        }
+       else {
+            valorTotal = (pedido.getValorUniProduto() * pedido.getQuantidadeProd());
+        }
+
+        pedido.setValortotal(valorTotal);
         Pedido savePedido =  repository.save(pedido);
         return savePedido;
     }
